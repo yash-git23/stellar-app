@@ -1,0 +1,28 @@
+{
+  "name": "SearchHistory",
+  "type": "object",
+  "properties": {
+    "question": {
+      "type": "string",
+      "description": "The space biology question asked by the user"
+    },
+    "answer": {
+      "type": "string",
+      "description": "The answer from NASA sources"
+    },
+    "source": {
+      "type": "string",
+      "description": "NASA source URL"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["genelab", "osdr", "apod", "techport", "images", "mission", "donki", "neows", "other"],
+      "description": "Type of NASA source"
+    },
+    "relevance_score": {
+      "type": "number",
+      "description": "Relevance score of the answer"
+    }
+  },
+  "required": ["question"]
+}
